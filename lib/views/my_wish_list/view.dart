@@ -60,7 +60,7 @@ class _MyWishListViewState extends State<MyWishListView> {
           SizedBox(height: 16),
           Expanded(
             child: isLoading
-                ? Center(
+                ? const Center(
                     child: CircularProgressIndicator(),
                   )
                 : GridView.builder(

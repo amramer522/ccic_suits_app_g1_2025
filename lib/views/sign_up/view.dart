@@ -8,38 +8,38 @@ class SignUpView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Sign Up")),
+      appBar: AppBar(title: const Text("Sign Up")),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(17),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 prefixIcon: Icon(Icons.email_outlined),
                 hintText: 'Enter your name',
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 prefixIcon: Icon(Icons.email_outlined),
                 hintText: 'Enter your email',
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             TextFormField(
               obscureText: true,
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.email_outlined),
+                prefixIcon: const Icon(Icons.email_outlined),
                 hintText: 'Enter your password',
                 suffixIcon: IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.visibility_off),
+                  icon: const Icon(Icons.visibility_off),
                 ),
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Row(
               children: [
                 Checkbox(
@@ -48,35 +48,35 @@ class SignUpView extends StatelessWidget {
                 ),
                 Text.rich(TextSpan(
                     children: [
-                      TextSpan(text: 'I agree to the medidoc'),
+                      const TextSpan(text: 'I agree to the medidoc'),
                       TextSpan(
                         text: ' Terms of Service',
                         style: TextStyle(color: Theme.of(context).primaryColor),
                       ),
-                      TextSpan(text: '\nand '),
+                      const TextSpan(text: '\nand '),
                       TextSpan(
                         text: 'Privacy Policy',
                         style: TextStyle(color: Theme.of(context).primaryColor),
                       ),
                     ],
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
                     )))
               ],
             ),
-            SizedBox(height: 22),
+            const SizedBox(height: 22),
             FilledButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => VerifyOTPView(),));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const VerifyOTPView(),));
               },
-              child: Text("Sign UP"),
+              child: const Text("Sign UP"),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("have an account?"),
-                TextButton(onPressed: () {}, child: Text('Login')),
+                const Text("have an account?"),
+                TextButton(onPressed: () {}, child: const Text('Login')),
               ],
             )
           ],

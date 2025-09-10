@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pro1/views/play/view.dart';
 
+import 'core/logic/helper_methods.dart';
 import 'views/calculator/view.dart';
 import 'views/create_new_password/view.dart';
 import 'views/hello_world/view.dart';
@@ -16,24 +17,25 @@ void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
+      navigatorKey: navigatorKey,
       theme: ThemeData(
-        scaffoldBackgroundColor: Color(0xffF4F5F7),
-        appBarTheme: AppBarTheme(backgroundColor: Colors.transparent),
+        scaffoldBackgroundColor: const Color(0xffF4F5F7),
+        appBarTheme: const AppBarTheme(backgroundColor: Colors.transparent),
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
-          hintStyle: TextStyle(color: Color(0xffA1A8B0)),
-          fillColor: Color(0xFFF9FAFB),
+          hintStyle: const TextStyle(color: Color(0xffA1A8B0)),
+          fillColor: const Color(0xFFF9FAFB),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(24),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(24),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               color: Color(0xffE5E7EB),
             ),
           ),
         ),
-        colorScheme: ColorScheme(
+        colorScheme: const ColorScheme(
             brightness: Brightness.light,
             error: Colors.red,
             primary: Color(0xffDD8560),
@@ -46,7 +48,9 @@ void main() {
       ),
       home: PageView(
         scrollDirection: Axis.vertical,
-        children: [
+        children: const [
+
+          OnBoardingView(),
           MyWishListView(),
           OnBoardingView(),
           SplashView(),

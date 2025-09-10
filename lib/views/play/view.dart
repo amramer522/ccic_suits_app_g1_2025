@@ -10,9 +10,9 @@ class PlayView extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            CircularProgressIndicator(),
-            LinearProgressIndicator(),
-            CupertinoActivityIndicator(),
+            const CircularProgressIndicator(),
+            const LinearProgressIndicator(),
+            const CupertinoActivityIndicator(),
             Switch(
               value: true,
               onChanged: (value) {},
@@ -28,7 +28,7 @@ class PlayView extends StatelessWidget {
                 onTap: () {
                   print('hello world');
                 },
-                child: Container(
+                child: const SizedBox(
                   height: 50,
                   // color: Colors.green,
                   child: Center(child: Column(
@@ -44,7 +44,7 @@ class PlayView extends StatelessWidget {
               child: Container(
                 height: 50,
                 color: Colors.yellow,
-                child: Center(child: Text("Ahmed")),
+                child: const Center(child: Text("Ahmed")),
               ),
             ),
           ],

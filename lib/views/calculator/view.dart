@@ -9,29 +9,29 @@ class CalculatorView extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         centerTitle: false,
-        title: Text('Calculator'),
+        title: const Text('Calculator'),
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.notifications_active),
+            icon: const Icon(Icons.notifications_active),
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
           ),
         ],
       ),
-      drawer: Drawer(),
+      drawer: const Drawer(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           print('hello world');
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
       body: ListView(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         children: [
-          CircleAvatar(
+          const CircleAvatar(
             radius: 100,
             backgroundImage: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5FNxZZ4Diquc05MFPvwp_eR_DL6ckXeGFcg_VDgNpB5EX-6SNDmBx5-XOKe8uVULBIPI&usqp=CAU'),
           ),
@@ -41,31 +41,31 @@ class CalculatorView extends StatelessWidget {
             width: 300,
             fit: BoxFit.cover,
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           TextFormField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               hintText: "Enter Number1",
               border: OutlineInputBorder(),
             ),
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           TextFormField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               hintText: "Enter Operation",
               border: OutlineInputBorder(),
             ),
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           TextFormField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               hintText: "Enter Number2",
               border: OutlineInputBorder(),
             ),
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           FilledButton(
             onPressed: () {},
-            child: Text("Calc"),
+            child: const Text("Calc"),
           )
         ],
       ),

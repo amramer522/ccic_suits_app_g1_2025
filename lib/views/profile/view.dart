@@ -9,10 +9,10 @@ class ProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Profile'),
+        title: const Text('Profile'),
       ),
       body: ListView(
-        padding: EdgeInsets.all(19),
+        padding: const EdgeInsets.all(19),
         children: [
           Center(
             child: ClipOval(
@@ -24,8 +24,8 @@ class ProfileView extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 14),
-          Text(
+          const SizedBox(height: 14),
+          const Text(
             'Safia Ayman',
             textAlign: TextAlign.center,
             style: TextStyle(
@@ -33,7 +33,7 @@ class ProfileView extends StatelessWidget {
               fontWeight: FontWeight.w600,
             ),
           ),
-          SizedBox(height: 41),
+          const SizedBox(height: 41),
           ItemProfile(icon: 'your_profile.png', title: 'Your Profile', onPressed: () {}),
           ItemProfile(icon: 'my_order.png', title: 'My Order', onPressed: () {}),
           ItemProfile(icon: 'payment_methods.png', title: 'Payment Methods', onPressed: () {}),

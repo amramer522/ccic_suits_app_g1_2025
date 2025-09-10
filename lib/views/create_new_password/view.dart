@@ -9,7 +9,7 @@ class CreateNewPasswordView extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {},
-          icon: Icon(Icons.arrow_back_ios),
+          icon: const Icon(Icons.arrow_back_ios),
         ),
       ),
       body: SingleChildScrollView(
@@ -17,7 +17,7 @@ class CreateNewPasswordView extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(
+            const Text(
               'Create New Password',
               style: TextStyle(
                 fontSize: 24,
@@ -25,8 +25,8 @@ class CreateNewPasswordView extends StatelessWidget {
                 color: Color(0xff101623),
               ),
             ),
-            SizedBox(height: 8),
-            Text(
+            const SizedBox(height: 8),
+            const Text(
               'Create your new password to login',
               style: TextStyle(
                 fontSize: 16,
@@ -34,34 +34,34 @@ class CreateNewPasswordView extends StatelessWidget {
                 color: Color(0xffA1A8B0),
               ),
             ),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             TextFormField(
               obscureText: true,
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.email_outlined),
+                prefixIcon: const Icon(Icons.email_outlined),
                 hintText: 'Enter your password',
                 suffixIcon: IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.visibility_off),
+                  icon: const Icon(Icons.visibility_off),
                 ),
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             TextFormField(
               obscureText: true,
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.email_outlined),
+                prefixIcon: const Icon(Icons.email_outlined),
                 hintText: 'Enter your password',
                 suffixIcon: IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.visibility_off),
+                  icon: const Icon(Icons.visibility_off),
                 ),
               ),
             ),
-            SizedBox(height: 22),
+            const SizedBox(height: 22),
             FilledButton(
               onPressed: () {},
-              child: Text("Create Password"),
+              child: const Text("Create Password"),
             ),
           ],
         ),

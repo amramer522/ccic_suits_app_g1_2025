@@ -16,8 +16,8 @@ class SplashView extends StatelessWidget {
               height: 100,
               width: 100,
             ),
-            SizedBox(width: 12),
-            Text(
+            const SizedBox(width: 12),
+            const Text(
               "Suits",
               style: TextStyle(fontSize: 128, color: Colors.white, fontFamily: "Waterfall"),
             )

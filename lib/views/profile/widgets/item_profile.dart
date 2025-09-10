@@ -17,16 +17,16 @@ class ItemProfile extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 16),
       child: TextButton.icon(
         onPressed: onPressed,
-        style: TextButton.styleFrom(backgroundColor: Color(0xffFFFFFF), padding: EdgeInsets.zero),
+        style: TextButton.styleFrom(backgroundColor: const Color(0xffFFFFFF), padding: EdgeInsets.zero),
         label: Padding(
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           child: Row(
             children: [
               Image.asset('assets/icons/$icon'),
-              SizedBox(width: 18),
+              const SizedBox(width: 18),
               Text(
                 title,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 15,
                   color: Colors.black,
                   fontWeight: FontWeight.w600,

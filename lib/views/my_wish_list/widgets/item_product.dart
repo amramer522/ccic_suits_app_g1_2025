@@ -25,7 +25,7 @@ class ItemProduct extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.only(top: 8, end: 8),
+                padding: const EdgeInsetsDirectional.only(top: 8, end: 8),
                 child: CircleAvatar(
                   backgroundColor: Colors.white.withOpacity(.5),
                   child: IconButton(
@@ -39,26 +39,26 @@ class ItemProduct extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           Row(
             children: [
               Expanded(
                 child: Text(
                   model.title,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
               ),
-              SizedBox(width: 2),
+              const SizedBox(width: 2),
               Icon(
                 Icons.star,
                 color: Theme.of(context).primaryColor,
               ),
               Text(
                 "${model.rate}",
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.w600,
                   color: Color(0xff979696),
@@ -68,7 +68,7 @@ class ItemProduct extends StatelessWidget {
           ),
           Text(
             "\$${model.price}",
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.w600,
               color: Color(0xffAB94A6),

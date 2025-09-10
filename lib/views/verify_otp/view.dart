@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
-import 'package:pro1/views/sign_up/view.dart';
 
 class VerifyOTPView extends StatelessWidget {
   const VerifyOTPView({super.key});
@@ -11,11 +10,11 @@ class VerifyOTPView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(
+            const Text(
               'Enter Verification Code',
               style: TextStyle(
                 fontSize: 24,
@@ -23,8 +22,8 @@ class VerifyOTPView extends StatelessWidget {
                 color: Color(0xff101623),
               ),
             ),
-            SizedBox(height: 8),
-            Text.rich(
+            const SizedBox(height: 8),
+            const Text.rich(
               TextSpan(
                 style: TextStyle(
                   fontSize: 16,
@@ -43,7 +42,7 @@ class VerifyOTPView extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 32),
+            const SizedBox(height: 32),
             PinCodeTextField(
               appContext: context,
               length: 4,
@@ -63,18 +62,18 @@ class VerifyOTPView extends StatelessWidget {
                   activeColor: Theme.of(context).primaryColor,
                   borderRadius: BorderRadius.circular(16)),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             FilledButton(
               onPressed: () {},
-              child: Text("Verify"),
+              child: const Text("Verify"),
             ),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Didn’t receive the code?"),
-                TextButton(onPressed: () {}, child: Text('Resend')),
+                const Text("Didn’t receive the code?"),
+                TextButton(onPressed: () {}, child: const Text('Resend')),
               ],
             ),
           ],

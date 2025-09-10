@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pro1/core/logic/helper_methods.dart';
 import 'package:pro1/views/login/view.dart';
+
+part 'model.dart';
 
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({super.key});
@@ -11,21 +14,16 @@ class OnBoardingView extends StatefulWidget {
 class _OnBoardingViewState extends State<OnBoardingView> {
   int currentView = 0;
 
-  void goToNextPage() {
-    Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const LoginView(),
-        ));
-  }
+  void goToNextPage() => goTo(const LoginView());
 
   @override
   Widget build(BuildContext context) {
+    final item = _list[currentView];
     return Scaffold(
       body: Stack(
         children: [
           Image.asset(
-            "assets/images/on_boarding$currentView.jpg",
+            "assets/images/${item.image}",
             height: double.infinity,
             width: double.infinity,
             fit: BoxFit.fill,
@@ -41,26 +39,27 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                       alignment: AlignmentDirectional.centerEnd,
                       child: OutlinedButton(
                         onPressed: goToNextPage,
-                        child: Text(
+                        child: const Text(
                           "Skip",
                           style: TextStyle(color: Colors.black),
                         ),
                       ),
                     ),
-                  Spacer(),
+                  const Spacer(),
                   Text(
-                    "Welcome To\nFashion",
-                    style: TextStyle(color: Colors.white, fontSize: 36, fontWeight: FontWeight.bold),
+                    item.title,
+                    style: const TextStyle(color: Colors.white, fontSize: 36, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 18),
-                  Text(
-                    "Discover the latest trends and exclusive styles\nfrom our top designers",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
+                  const SizedBox(height: 18),
+                  if (item.description != null)
+                    Text(
+                      item.description!,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 18),
+                  const SizedBox(height: 18),
                   Row(
                     children: [
                       if (currentView != 0)
@@ -73,14 +72,14 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                           elevation: 0,
                           shape: const CircleBorder(side: BorderSide()),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.only(start: 8),
+                            padding: const EdgeInsetsDirectional.only(start: 8),
                             child: Icon(
                               Icons.arrow_back_ios,
                               color: Theme.of(context).primaryColor,
                             ),
                           ),
                         ),
-                      Spacer(),
+                      const Spacer(),
                       ...List.generate(
                         3,
                         (index) => Padding(
@@ -89,11 +88,11 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                           ),
                           child: CircleAvatar(
                             radius: 5,
-                            backgroundColor: index == currentView ? null : Color(0xffD9D9D9),
+                            backgroundColor: index == currentView ? null : const Color(0xffD9D9D9),
                           ),
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       FloatingActionButton(
                         onPressed: () {
                           if (currentView == 2) {

@@ -10,25 +10,25 @@ class LoginView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login"),
+        title: const Text("Login"),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(17),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(
+            const Text(
               'Hi Welcome back, you’ve been missed',
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 39),
+            const SizedBox(height: 39),
             TextFormField(
               decoration: InputDecoration(
                 prefixIcon: Image.asset('assets/icons/email.png'),
                 hintText: 'Enter your email',
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             TextFormField(
               obscureText: true,
               decoration: InputDecoration(
@@ -40,36 +40,36 @@ class LoginView extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Align(
               alignment: AlignmentDirectional.centerEnd,
               child: TextButton(
                 onPressed: () {},
-                child: Text('Forgot Password?'),
+                child: const Text('Forgot Password?'),
               ),
             ),
-            SizedBox(height: 22),
+            const SizedBox(height: 22),
             FilledButton(
               onPressed: () {},
-              child: Text("Login"),
+              child: const Text("Login"),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Don’t have an account?"),
+                const Text("Don’t have an account?"),
                 TextButton(
                     onPressed: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => SignUpView(),
+                          builder: (context) => const SignUpView(),
                         ),
                       );
                     },
-                    child: Text('Sign Up')),
+                    child: const Text('Sign Up')),
               ],
             ),
-            SizedBox(height: 16),
-            Row(
+            const SizedBox(height: 16),
+            const Row(
               children: [
                 Expanded(child: Divider()),
                 SizedBox(
@@ -82,12 +82,12 @@ class LoginView extends StatelessWidget {
                 Expanded(child: Divider()),
               ],
             ),
-            SizedBox(height: 34),
+            const SizedBox(height: 34),
             OutlinedButton(
               onPressed: () {},
               style: OutlinedButton.styleFrom(
-                backgroundColor: Color(0xffFFFFFF),
-                side: BorderSide(
+                backgroundColor: const Color(0xffFFFFFF),
+                side: const BorderSide(
                   color: Color(0xffE5E7EB),
                 ),
               ),
@@ -96,10 +96,10 @@ class LoginView extends StatelessWidget {
                 child: Row(
                   children: [
                     Image.asset('assets/images/google.png'),
-                    SizedBox(
+                    const SizedBox(
                       width: 52,
                     ),
-                    Text(
+                    const Text(
                       'Sign in with google',
                       style: TextStyle(
                         fontSize: 16,
@@ -111,18 +111,18 @@ class LoginView extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             SocialButton(
               icon: 'apple',
               text: 'Apple',
               onPressed: () {},
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             OutlinedButton(
               onPressed: () {},
               style: OutlinedButton.styleFrom(
-                backgroundColor: Color(0xffFFFFFF),
-                side: BorderSide(
+                backgroundColor: const Color(0xffFFFFFF),
+                side: const BorderSide(
                   color: Color(0xffE5E7EB),
                 ),
               ),
@@ -131,10 +131,10 @@ class LoginView extends StatelessWidget {
                 child: Row(
                   children: [
                     Image.asset('assets/images/facebook.png'),
-                    SizedBox(
+                    const SizedBox(
                       width: 52,
                     ),
-                    Text(
+                    const Text(
                       'Sign in with Facebook',
                       style: TextStyle(
                         fontSize: 16,

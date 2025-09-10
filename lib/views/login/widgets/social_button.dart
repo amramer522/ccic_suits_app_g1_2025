@@ -17,8 +17,8 @@ class SocialButton extends StatelessWidget {
     return OutlinedButton(
       onPressed: onPressed,
       style: OutlinedButton.styleFrom(
-        backgroundColor: Color(0xffFFFFFF),
-        side: BorderSide(
+        backgroundColor: const Color(0xffFFFFFF),
+        side: const BorderSide(
           color: Color(0xffE5E7EB),
         ),
       ),
@@ -27,12 +27,12 @@ class SocialButton extends StatelessWidget {
         child: Row(
           children: [
             Image.asset('assets/images/$icon.png'),
-            SizedBox(
+            const SizedBox(
               width: 52,
             ),
             Text(
               'Sign in with $text',
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w600,
                 color: Color(0xff000000),

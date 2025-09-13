@@ -72,5 +72,3 @@ class CalculatorView extends StatelessWidget {
     );
   }
 }
-// hexa color
-// ready colors

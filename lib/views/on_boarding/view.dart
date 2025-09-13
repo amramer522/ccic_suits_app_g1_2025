@@ -14,7 +14,9 @@ class OnBoardingView extends StatefulWidget {
 class _OnBoardingViewState extends State<OnBoardingView> {
   int currentView = 0;
 
-  void goToNextPage() => goTo(const LoginView());
+  void goToNextPage() => goTo(const LoginView(),canPop: false);
+
+  final controller = PageController();
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +24,20 @@ class _OnBoardingViewState extends State<OnBoardingView> {
     return Scaffold(
       body: Stack(
         children: [
-          Image.asset(
-            "assets/images/${item.image}",
-            height: double.infinity,
-            width: double.infinity,
-            fit: BoxFit.fill,
+          PageView.builder(
+            controller: controller,
+            physics: const ClampingScrollPhysics(),
+            onPageChanged: (value) {
+              currentView = value;
+              setState(() {});
+            },
+            itemBuilder: (context, index) => Image.asset(
+              "assets/images/${_list[index].image}",
+              height: double.infinity,
+              width: double.infinity,
+              fit: BoxFit.fill,
+            ),
+            itemCount: _list.length,
           ),
           SafeArea(
             child: Padding(
@@ -62,20 +73,25 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                   const SizedBox(height: 18),
                   Row(
                     children: [
-                      if (currentView != 0)
-                        FloatingActionButton(
-                          onPressed: () {
-                            currentView--;
-                            setState(() {});
-                          },
-                          backgroundColor: Colors.transparent,
-                          elevation: 0,
-                          shape: const CircleBorder(side: BorderSide()),
-                          child: Padding(
-                            padding: const EdgeInsetsDirectional.only(start: 8),
-                            child: Icon(
-                              Icons.arrow_back_ios,
-                              color: Theme.of(context).primaryColor,
+                        AbsorbPointer(
+                          absorbing: currentView == 0,
+                          child: Opacity(
+                            opacity: currentView != 0?1:0,
+                            child: FloatingActionButton(
+                              onPressed: () => controller.previousPage(
+                                  duration: const Duration(milliseconds: 300),
+                                  curve: Curves.linear,
+                                ),
+                              backgroundColor: Colors.transparent,
+                              elevation: 0,
+                              shape: const CircleBorder(side: BorderSide()),
+                              child: Padding(
+                                padding: const EdgeInsetsDirectional.only(start: 8),
+                                child: Icon(
+                                  Icons.arrow_back_ios,
+                                  color: Theme.of(context).primaryColor,
+                                ),
+                              ),
                             ),
                           ),
                         ),
@@ -87,7 +103,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                             end: index != 2 ? 12 : 0,
                           ),
                           child: CircleAvatar(
-                            radius: 5,
+                            radius: index == currentView?7.5:5,
                             backgroundColor: index == currentView ? null : const Color(0xffD9D9D9),
                           ),
                         ),
@@ -98,8 +114,10 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                           if (currentView == 2) {
                             goToNextPage();
                           } else {
-                            currentView++;
-                            setState(() {});
+                            controller.nextPage(
+                              duration: const Duration(milliseconds: 300),
+                              curve: Curves.linear,
+                            );
                           }
                         },
                         shape: const CircleBorder(),

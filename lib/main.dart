@@ -46,24 +46,7 @@ void main() {
             surface: Colors.white,
             onSurface: Color(0xff101623)),
       ),
-      home: PageView(
-        scrollDirection: Axis.vertical,
-        children: const [
-
-          OnBoardingView(),
-          MyWishListView(),
-          OnBoardingView(),
-          SplashView(),
-          LoginView(),
-          VerifyOTPView(),
-          ProfileView(),
-          PlayView(),
-          CreateNewPasswordView(),
-          HelloWorldView(),
-          SignUpView(),
-          CalculatorView(),
-        ],
-      ),
+      home:  const CalculatorView(),
     ),
   );
 }
@@ -107,5 +90,16 @@ BottomNavigationBar
 GestureDetector
 InkWell
 ClipOval
+
+
+
+git branch [branch_name]
+git switch [branch_name]
+git switch -
+git checkout [branch_name]
+git branch -d [branch_name]
+git branch -m [new_branch_name]
+git switch -c [branch_name]
+
 
  */

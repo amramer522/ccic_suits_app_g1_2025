@@ -3,6 +3,7 @@ import 'package:pro1/views/play/view.dart';
 
 import 'core/logic/helper_methods.dart';
 import 'views/calculator/view.dart';
+import 'views/counter/view.dart';
 import 'views/create_new_password/view.dart';
 import 'views/hello_world/view.dart';
 import 'views/login/view.dart';
@@ -46,7 +47,7 @@ void main() {
             surface: Colors.white,
             onSurface: Color(0xff101623)),
       ),
-      home:  const CalculatorView(),
+      home:  const CounterView(),
     ),
   );
 }

@@ -1,20 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:pro1/views/play/view.dart';
+import 'package:pro1/views/test.dart';
 
 import 'core/logic/helper_methods.dart';
+import 'views/animated_splash/view.dart';
 import 'views/calculator/view.dart';
 import 'views/counter/view.dart';
+import 'views/counter/view_notifier.dart';
 import 'views/create_new_password/view.dart';
 import 'views/hello_world/view.dart';
 import 'views/login/view.dart';
 import 'views/my_wish_list/view.dart';
 import 'views/on_boarding/view.dart';
+import 'views/play_music.dart';
 import 'views/profile/view.dart';
 import 'views/sign_up/view.dart';
 import 'views/splash/view.dart';
+import 'views/test_sheetify.dart';
+import 'views/tween_anim.dart';
 import 'views/verify_otp/view.dart';
 
 void main() {
+
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -47,7 +54,8 @@ void main() {
             surface: Colors.white,
             onSurface: Color(0xff101623)),
       ),
-      home:  const CounterView(),
+      home:  AnimatedSplash(),
+      // home:  const CounterNotifierView(),
     ),
   );
 }

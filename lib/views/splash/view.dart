@@ -15,7 +15,7 @@ class SplashView extends StatelessWidget {
       body: Center(
         child: ElasticInDown(
           duration: const Duration(seconds: 2),
-          onFinish: (direction) => goTo(const OnBoardingView(),canPop: false),
+          // onFinish: (direction) => goTo(const OnBoardingView(),canPop: false),
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
